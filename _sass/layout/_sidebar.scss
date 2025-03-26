@@ -16,7 +16,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   height: 100%;
   overflow-y: auto;
   width: v.$sidebar-width;
-  background: var(--sidebar-bg);
+  //background: var(--sidebar-bg);
+  background: url('/assets/img/sky.jpg') center/cover no-repeat;
   border-right: 1px solid var(--sidebar-border-color);
 
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -68,6 +69,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     img {
       transition: transform 0.5s;
+      transform: scale(1.2);
+      margin-top: -1rem;
 
       &:hover {
         transform: scale(1.2);
@@ -79,9 +82,17 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
 
-    padding-left: 2.5rem;
-    padding-right: 1.25rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // 가로 가운데 정렬
+    justify-content: center; // 세로 가운데 정렬
+    text-align: center; // 텍스트 가운데 정렬
+    width: 100%; // 부모 요소가 자식 요소를 다 포함하도록 보장
+    padding-left: 0;  // 좌우 여백 없애기
+    padding-right: 0; // 좌우 여백 없애기
+    //padding-left: 2.5rem;
+    //padding-right: 1.25rem;
+    //width: 100%;
 
     @include bp.lg {
       margin-top: 3rem;
@@ -106,18 +117,20 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     width: fit-content;
-    color: var(--site-title-color);
+    color: #cdcdd7;
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: var(--site-subtitle-color);
+    color: #cdcdd7;
     margin-top: 0.25rem;
-    word-spacing: 1px;
+    // word-spacing: 1px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-style: normal;
+    transform: none;
   }
 
   ul {
@@ -140,9 +153,11 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         align-items: center;
         border-radius: 0.75rem;
         font-weight: 600;
+        color: #cdcdd7;
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
+          color: var(--sidebar-active-color);
         }
 
         i {
@@ -175,9 +190,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   }
 
   .sidebar-bottom {
-    padding-left: 2rem;
-    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1.5rem;
+
+    //padding-left: 2rem;
+    //padding-right: 1rem;
 
     @include bp.xxxl {
       padding-left: 2.75rem;
@@ -191,16 +210,16 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       height: $btn-size;
       margin-bottom: $btn-mb; // multi line gap
       border-radius: 50%;
-      color: var(--sidebar-btn-color);
-      background-color: var(--sidebar-btn-bg);
+      color: #cdcdd7;
+      //background-color: var(--sidebar-btn-bg);
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      &:not(:focus-visible) {
-        box-shadow: var(--sidebar-border-color) 0 0 0 1px;
-      }
+      //&:not(:focus-visible) {
+      //  box-shadow: var(--sidebar-border-color) 0 0 0 1px;
+      //}
 
       &:hover {
         background-color: var(--sidebar-hover-bg);
