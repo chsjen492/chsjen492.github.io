@@ -63,8 +63,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     @include bp.sm {
-      width: 7rem;
-      height: 7rem;
+      width: 6rem;
+      height: 6rem;
     }
 
     img {
@@ -156,8 +156,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         color: #cdcdd7;
 
         &:hover {
-          background-color: var(--sidebar-hover-bg);
-          color: var(--sidebar-active-color);
+          background-color: #DFE9F1A3;
+          color: #1D1D1DFF;
         }
 
         i {
@@ -174,8 +174,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
       &.active {
         .nav-link {
-          color: var(--sidebar-active-color);
-          background-color: var(--sidebar-hover-bg);
+          color: #1D1D1DFF;
+          background-color: #DFE9F1A3;
 
           span {
             opacity: 1;
